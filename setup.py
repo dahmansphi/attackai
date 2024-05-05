@@ -11,7 +11,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 setup(
 
     name="attackai",  # Required
-    version="0.0.0",  # Required
+    version="0.0.1",  # Required
     
     description="Simulation of poisoning attack on AI model",  # Optional
     long_description=long_description,  # Optional
@@ -45,10 +45,9 @@ setup(
     keywords="Cybersecurity, Machine Learning, Artificial Intelligence, Poisoning attack",  # Optional
     
     package_dir={"": "src"},  # Optional
-    #
     packages=find_packages(where="src"),  # Required
     
-    python_requires=">=3.10",
+    python_requires=">=3.9",
     # This field lists other packages that your project depends on to run.
     # Any package you put here will be installed by pip when your project is
     # installed, so they must be valid existing projects.

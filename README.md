@@ -62,6 +62,7 @@ The following __gif__ illustrates the kind of data poisoning attack on __AI Mode
 
 ![training_ai_model](https://raw.githubusercontent.com/dahmansphi/attackai/main/assets/ai_attack_simulation.gif) 
 
+
 To this end, such matters must be considered by the company AI division once they decide to employ the __AI problem-solving paradigm__.   
 
 
