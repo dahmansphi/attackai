@@ -1,7 +1,10 @@
+
+> [!TIP]
+> This project is a complementary to the __Protect AI Model__ project that can be found in the [repo](https://github.com/dahmansphi/protectai). To this end, to understand the entire idea you shall make sure to read both documentations.
+
 # About the Package
 ## Author's Words
-
-Welcome to **the first Edition of ATTACK AI MODEL SIMULATION- AAIM Tool** official documentation. I am Dr. Deniz Dahman the creator of the BireyselValue algorithm and the author of this package. In the following section you will have a brief introduction on the principal idea of the AAIM tool. In addition, a reference to the academic publication on this ptential type of __cyber attack__ and potential __defence__. Before going ahead, I would like to let you know that I have done this work as an independent scientist without any fund or similar capacity. 
+Welcome to **the first Edition of ATTACK AI MODEL SIMULATION- attackai Tool** official documentation. I am Dr. Deniz Dahman the creator of the BireyselValue algorithm and the author of this package. In the following section you will have a brief introduction on the principal idea of the __attackai__ tool. In addition, a reference to the academic publication on this potential type of __cyber attack__ and potential __defence__. Before going ahead, I would like to let you know that I have done this work as an independent scientist without any fund or similar capacity. 
 I am dedicated to proceeding and seek further improvement on the proposed method at all costs. To this end if you wish to contribute in any way to this work, please find further details  in the contributing section.  
   
 ## Contributing 
@@ -103,7 +106,7 @@ The AI team then decides to create the pipeline to update the mode as follows:
 4. Technically speaking, that new input will update the model in a way that change the model weights values 
 
 ### AI Model Poisoning  
-If the adversary has access to the __weekly sources__ from where the model makes its update, then the model over time will have the bad results of any potential fails to __make the right predictions__. Assume the adversary has that access, then can utilize the attackai to make the attack.
+If the adversary has access to the __weekly sources__ from where the model makes its update, then the model over time will have the bad results of any potential fails to __make the right predictions__. Assume the adversary has that access, then can utilize the __attackai__ to make the attack of any type as outlined in [type one attack](#type-one-attack) or [type two attack](#type-two-attack).
 
 ## Install attackai
 
@@ -124,7 +127,7 @@ The result then shall be as:
 ```
 Name: attackai
 Version: 1.0.0
-Summary: Simulation V.1 of THE Attack AI Model-AAIM tool
+Summary: Simulation of poisoning attack on AI model
 Home-page: https://github.com/dahmansphi/attackai
 Author: Dr. Deniz Dahman's
 Author-email: dahmansphi@gmail.com
@@ -141,8 +144,8 @@ the build-in functions of the attackai and understand each.
 Essentially, if you create an instance from the attackai as so: 
 
 ```
-from aaim.aaim import AAIM_tool
-inst = AAIM_tool()
+from attackai import AttackAI
+inst = AttackAI()
 ```
 now this **inst** instance offers you access to those build in functions that you need. 
 this is a screenshot:
@@ -169,7 +172,8 @@ In this attack the aim of the adversary is __to swap__ the contents of both clas
 once you justify the result you can __execute the attack__ using the `execute_attack_t2()`. 
 
 ## Conclusion on installation and employing 
-Once the attack is done, you need to observe the effect, that is the part where you need to check the documentation of the __paim-sim__ tool. In the documentation, first I will illustrate the result of both attacks, then I propose the method to make the defense from such attack.   
+Once the attack is done, you need to observe the effect, that is the part where you need to check the documentation of the __protectai__ tool. In the documentation, first I will illustrate the result of both attacks, then I propose the method to make the defense from such attack.   
+
 
 
 # Reference
