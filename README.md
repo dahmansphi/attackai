@@ -32,7 +32,7 @@ Basically, AI model is a mathematical tool, so to speak. It mainly relies on an 
 
 AI models are mimicking such paradigm. The human brain is __the mathematical equation__ of the model, the surroundings and the circumstances are __the training samples__ that we feed to the mathematical equation to learn, the judgements by the surroundings are __the calculation of those misclassified cases__ which known as obtaining the derivatives. Obviously, we then __aim to have a model that can give accurate answers__ with a minimum level of mistakes.  
 
-![training_ai_model](./assets/training_ai_model.gif) 
+![training_ai_model](https://raw.githubusercontent.com/dahmansphi/attackai/main/assets/training_ai_model.gif) 
 
 Once the technical workflow of the AI is understood, it should be clear then that the __training samples__ from which the AI model learns are the most important element of this entire flow. This element can be thought of as the __adjudicator__ whether the model will __succeed or fail__. 
 To this end, such element is a target for __adversaries__ who aim to fail the model. If such __attack__ is successful, then it’s known as __data poisoning attack__.  
@@ -57,13 +57,13 @@ Unintended outputs	Does the model behave unexpectedly and produce unintended res
 
 The following __gif__ illustrates the kind of data poisoning attack on __AI Model__. It basically shows how the __alphas or weights__ are influenced by the new training samples which the model uses __to update itself__.
 
-![training_ai_model](./assets/ai_attack_simulation.gif) 
+![training_ai_model](https://raw.githubusercontent.com/dahmansphi/attackai/main/assets/ai_attack_simulation.gif) 
 
 To this end, such matters must be considered by the company AI division once they decide to employ the __AI problem-solving paradigm__.   
 
 
-## aaim-sim package __version__1.0
-To understand the consequence of such an attack, it would be great if available tools could simulate the attack itself. This is where I do introduce the __aaim-sim__ tool. This tool basically illustrates two types of attacks: 
+## attackai package __version__1.0
+To understand the consequence of such an attack, it would be great if available tools could simulate the attack itself. This is where I do introduce the __attackai__ tool. This tool basically illustrates two types of attacks: 
 
 1. __corrupt data sample attack__: in this type of attack the attacker manages to corrupt the data sample of __AI model__ during the stage of __AI continues learning__. Basically, the expected workflow of __AI model__ is that after building the first model, it should __continue__ learning from new samples, and as a result the alphas or as known __weights__ of the model will be updated accordingly. Thus, if a new patch of those samples is corrupted in any way, then the __new updated AI model__ will update the weights based on poisoned samples. This is where symptoms of __degraded AI results__ can be observed then.   
 
@@ -74,9 +74,9 @@ To understand the consequence of such an attack, it would be great if available 
 
 # Installation 
 > [!TIP]
-> The simulation using __aaim-sim__ is done on a __binary class__ images dataset, referenced in the below section. The _gif_ illustrations shows the storyline as assumed.
+> The simulation using __attackai__ is done on a __binary class__ images dataset, referenced in the below section. The _gif_ illustrations shows the storyline as assumed.
 
-![storyline](./assets/storyline.gif)
+![storyline](https://raw.githubusercontent.com/dahmansphi/attackai/main/assets/storyline.gif)
 
 ## Data Availability
 The NIH chest radiographs that support the findings of this project are publicly available at https://nihcc.app.box.com/v/ChestXray-NIHCC and https://www.kaggle.com/c/rsna-pneumonia-detection-challenge. The Indiana University Hospital Network database is available at https://openi.nlm.nih.gov/. The WCMC pediatric data that support the findings of this study are available in the identifier 10.17632/rscbjbr9sj.3
@@ -103,42 +103,42 @@ The AI team then decides to create the pipeline to update the mode as follows:
 4. Technically speaking, that new input will update the model in a way that change the model weights values 
 
 ### AI Model Poisoning  
-If the adversary has access to the __weekly sources__ from where the model makes its update, then the model over time will have the bad results of any potential fails to __make the right predictions__. Assume the adversary has that access, then can utilize the aaim-sim to make the attack.
+If the adversary has access to the __weekly sources__ from where the model makes its update, then the model over time will have the bad results of any potential fails to __make the right predictions__. Assume the adversary has that access, then can utilize the attackai to make the attack.
 
-## Install aaim-sim
+## Install attackai
 
 > [!TIP]
 > make sure to create the project setup as outlined [above](#project-setup).
 
 to install the package all what you have to do:
 ```
-pip install aaim-sim
+pip install attackai
 ```
 You should then be able to use the package. You may want to confirm the installation
 
 ```
-pip show aaim-sim
+pip show attackai
 ```
 The result then shall be as:
 
 ```
-Name: aaim-sim
+Name: attackai
 Version: 1.0.0
 Summary: Simulation V.1 of THE Attack AI Model-AAIM tool
-Home-page: https://github.com/dahmansphi/aaim-sim
+Home-page: https://github.com/dahmansphi/attackai
 Author: Dr. Deniz Dahman's
 Author-email: dahmansphi@gmail.com
 ```
 
-## Employ the aaim-sim -**Conditions**
+## Employ the attackai -**Conditions**
 
 > [!IMPORTANT]
-> It’s mandatory, to use the first edition of aaim-sim, to make sure the __update__ folder that have the subfolders of the __normal and Pneumonia__ as illustrated in the gif above. 
+> It’s mandatory, to use the first edition of attackai, to make sure the __update__ folder that have the subfolders of the __normal and Pneumonia__ as illustrated in the gif above. 
 
-## Detour in the aaim-sim package- Build-in
+## Detour in the attackai package- Build-in
 Once your installation is done, and you have met all the conditions, then you may want to check 
-the build-in functions of the aaim-sim and understand each.  
-Essentially, if you create an instance from the aaim-sim as so: 
+the build-in functions of the attackai and understand each.  
+Essentially, if you create an instance from the attackai as so: 
 
 ```
 from aaim.aaim import AAIM_tool
@@ -147,24 +147,24 @@ inst = AAIM_tool()
 now this **inst** instance offers you access to those build in functions that you need. 
 this is a screenshot:
 
-![Screenshot of build-in functions of the aaim-sim tool.](./assets/functions_aaim.png)
+![Screenshot of build-in functions of the attackai tool.](https://raw.githubusercontent.com/dahmansphi/attackai/main/assets/functions_aaim.png)
 
-Once you have aaim-sim instance, here are the details of the right sequence to employ the attack:
+Once you have attackai instance, here are the details of the right sequence to employ the attack:
 
 ### type one attack:
 
 In this attack the aim of the adversary is __to corrupt__ the training sample. To illustrate that; you can first make use of the `explore_attack_t1()` function. The function takes two main args __path to the update folder__ and __size of the attack__. the later implies by how mush you wish to corrupt the image. In addtion, there is an optional arg that is the __stamp__ option, which offers to make stamp on the image which you attack. the follwoing graph illustrate that:
 
-![Screenshot of attack one no stamp.](./assets/attack_1_im_1.png)
-![Screenshot of attack one with stamp.](./assets/attack_1_im_2.png)
+![Screenshot of attack one no stamp.](https://raw.githubusercontent.com/dahmansphi/attackai/main/assets/attack_1_im_1.png)
+![Screenshot of attack one with stamp.](https://raw.githubusercontent.com/dahmansphi/attackai/main/assets/attack_1_im_2.png)
 
 once you justify the result you can __execute the attack__ using the `execute_attack_t1()`, the results of the attack is illustrated in the following graph:
-![Screenshot of attack one with stamp.](./assets/attack_1_im_3.png)
+![Screenshot of attack one with stamp.](https://raw.githubusercontent.com/dahmansphi/attackai/main/assets/attack_1_im_3.png)
 
 ### type two attack:
 In this attack the aim of the adversary is __to swap__ the contents of both classes. To illustrate that; you can first make use of the `explore_attack_t2()` function. The function takes ONE main arg __path to the update folder__. the follwoing graph illustrate that:
 
-![Screenshot of attack one no stamp.](./assets/attack_2_im_1.png)
+![Screenshot of attack one no stamp.](https://raw.githubusercontent.com/dahmansphi/attackai/main/assets/attack_2_im_1.png)
 
 once you justify the result you can __execute the attack__ using the `execute_attack_t2()`. 
 
