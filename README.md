@@ -179,5 +179,5 @@ Once the attack is done, you need to observe the effect, that is the part where 
 
 # Reference
 
-please follow up on the project page to find the academic published paper on the project
+please follow up on the [publication](https://dahmansphi.com/publications/) in the website to find the academic [published paper](https://www.scienceopen.com/hosted-document?doi=10.14293/PR2199.000907.v1)
  
